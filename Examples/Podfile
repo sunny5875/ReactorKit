@@ -1,0 +1,18 @@
+workspace 'Examples.xcworkspace'
+platform :ios, '9.0'
+use_frameworks!
+inhibit_all_warnings!
+
+abstract_target 'Example' do
+  pod 'ReactorKit'
+  pod 'RxSwift', '~> 6.0'
+  pod 'RxCocoa', '~> 6.0'
+
+  target 'Counter' do
+    project 'Counter/Counter.xcodeproj'
+  end
+
+  target 'GitHubSearch' do
+    project 'GitHubSearch/GitHubSearch.xcodeproj'
+  end
+end
